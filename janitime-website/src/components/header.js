@@ -2,32 +2,28 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import janitimeLogo from "../images/janitime-logo.svg"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header className="header-container">
+    <nav className="nav-container">
+      <div className="logo-container">
+        <div className="logo">
+          <Link to="/">
+            <img src={janitimeLogo} alt="Janitime" />
+          </Link>
+        </div>
+        <div className="logo-text">
+          <Link to="/">{siteTitle}</Link>
+        </div>
+      </div>
+      <div className="nav-right-links">
+        <Link to="/">Features</Link>
+        <Link to="/">Getting Started</Link>
+        <Link to="/">Pricing</Link>
+        <button className="nav-button">Sign Up</button>
+      </div>
+    </nav>
   </header>
 )
 
