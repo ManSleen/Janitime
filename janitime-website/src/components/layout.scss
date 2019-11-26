@@ -134,7 +134,7 @@ body {
   padding: 0.9rem 0;
   background: #f7f8fc;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   .nav-container {
     width: 80%;
     margin: 0 auto;
@@ -192,7 +192,7 @@ body {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   border-top: 16px solid $green-main;
   padding: 50px 0;
 
@@ -222,7 +222,7 @@ footer {
     }
   }
   .footer-container {
-    width: 65vw;
+    width: 65%;
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
@@ -258,7 +258,7 @@ footer {
   flex-flow: column nowrap;
   width: 100%;
   .hero {
-    width: 65vw;
+    width: 60vw;
     margin: 0 auto;
     padding: 60px 0;
     h1 {
@@ -318,7 +318,7 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
-    width: 50%;
+    width: 45%;
     justify-content: space-between;
     align-items: center;
     .benefit-container {
@@ -346,4 +346,57 @@ footer {
       }
     }
   }
+}
+
+.clock-in {
+  background: url("../images/blob.svg") no-repeat right bottom -120px;
+  background-size: 30%;
+  overflow: hidden;
+  .clock-in-container {
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    .clock-in-title {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+        /* or 125% */
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.01em;
+        color: $black;
+        width: 60%;
+        margin-bottom: 30px;
+      }
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 35px;
+        /* or 146% */
+        display: flex;
+        align-items: center;
+        color: $almost-black;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.phone-screen {
+  text-align: right;
+  margin: 40px 100px 40px 0;
+  img {
+    width: 300px;
+  }
+}
+
+.box {
+  width: 50%;
 }
