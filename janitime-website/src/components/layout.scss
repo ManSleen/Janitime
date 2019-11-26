@@ -195,8 +195,7 @@ footer {
   width: 100vw;
   border-top: 16px solid $green-main;
   padding: 50px 0;
-  position: absolute;
-  bottom: 0;
+
   text-align: center;
   background: $gray;
   h3 {
@@ -249,6 +248,101 @@ footer {
         padding: 0;
 
         vertical-align: middle;
+      }
+    }
+  }
+}
+
+.landing-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  .hero {
+    width: 65vw;
+    margin: 0 auto;
+    padding: 60px 0;
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 3.6rem;
+      line-height: 74px;
+      letter-spacing: 0.06em;
+      color: $black;
+      width: 90%;
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.08em;
+      color: $black;
+      margin: 30px 0;
+      width: 80%;
+    }
+    .hero-signup {
+      @include button;
+      width: 40%;
+    }
+    .right {
+      text-align: right;
+    }
+  }
+  .split {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .left,
+  .right {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
+
+.learn-more-container {
+  background: $gray;
+  padding: 64px 0;
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+  .learn-more-button {
+    @include secondary-button;
+    padding-left: 5.8rem;
+    padding-right: 5.8rem;
+    margin: 30px 0 0 0;
+  }
+  .learn-more {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    .benefit-container {
+      width: 33.3%;
+      text-align: center;
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        /* identical to box height, or 100% */
+        text-align: center;
+        color: $black;
+        margin-bottom: 25px;
+      }
+    }
+    .benefit {
+      height: 82px;
+      background: url("../images/affordable.svg") no-repeat center;
+      img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-55%);
+        width: 35px;
       }
     }
   }
