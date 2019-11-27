@@ -132,7 +132,7 @@ body {
 
 .header-container {
   padding: 0.9rem 0;
-  background: #f7f8fc;
+  background: $gray;
   margin: 0;
   width: 100%;
   .nav-container {
@@ -277,13 +277,10 @@ footer {
       line-height: 32px;
       letter-spacing: 0.08em;
       color: $black;
-      margin: 30px 0;
+      margin: 30px 0 0 0;
       width: 80%;
     }
-    .hero-signup {
-      @include button;
-      width: 40%;
-    }
+
     .right {
       text-align: right;
     }
@@ -308,12 +305,7 @@ footer {
   width: 100%;
   margin-top: 80px;
   text-align: center;
-  .learn-more-button {
-    @include secondary-button;
-    padding-left: 5.8rem;
-    padding-right: 5.8rem;
-    margin: 30px 0 0 0;
-  }
+
   .learn-more {
     margin: 0 auto;
     display: flex;
@@ -329,7 +321,6 @@ footer {
         font-weight: normal;
         font-size: 24px;
         line-height: 24px;
-        /* identical to box height, or 100% */
         text-align: center;
         color: $black;
         margin-bottom: 25px;
@@ -347,31 +338,47 @@ footer {
     }
   }
 }
-
-.clock-in {
-  background: url("../images/blob.svg") no-repeat right bottom -120px;
-  background-size: 30%;
+.info-section {
   overflow: hidden;
-  .clock-in-container {
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 60px;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: $black;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    align-items: center;
+    color: $almost-black;
+    width: 95%;
+  }
+  .info-section-container {
     width: 60vw;
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
-    .clock-in-title {
+    .info-section-text {
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
       h2 {
         font-style: normal;
         font-weight: bold;
-        font-size: 48px;
+        font-size: 3.2rem;
         line-height: 60px;
-        /* or 125% */
         display: flex;
         align-items: center;
         letter-spacing: 0.01em;
         color: $black;
-        width: 60%;
+        width: 100%;
         margin-bottom: 30px;
       }
       p {
@@ -379,19 +386,47 @@ footer {
         font-weight: normal;
         font-size: 24px;
         line-height: 35px;
-        /* or 146% */
         display: flex;
         align-items: center;
         color: $almost-black;
-        width: 100%;
+        width: 95%;
       }
     }
   }
 }
 
-.phone-screen {
+.clock-in {
+  background: url("../images/blob.svg") no-repeat right bottom -120px;
+  background-size: 30%;
+}
+
+.battery-saver {
+  background: url("../images/blob3.svg") no-repeat left bottom -250px;
+  background-color: $gray;
+  background-size: 30%;
+}
+
+.auto-gps {
+  background: url("../images/blob4.svg") no-repeat right top -150px;
+  background-size: 35%;
+}
+
+.tracking {
+  background: url("../images/blob2.svg") no-repeat left bottom -200px;
+  background-color: $gray;
+  background-size: 30%;
+}
+
+.phone-screen-right {
   text-align: right;
   margin: 40px 100px 40px 0;
+  img {
+    width: 300px;
+  }
+}
+.phone-screen-left {
+  text-align: left;
+  margin: 40px 0 40px 100px;
   img {
     width: 300px;
   }
@@ -399,4 +434,51 @@ footer {
 
 .box {
   width: 50%;
+}
+
+.cloud-section {
+  text-align: center;
+  padding: 120px 0;
+  h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  p {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.ready-to-join {
+  text-align: center;
+  padding: 80px 0;
+  background: $gray;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.signup-button {
+  @include button;
+  width: fit-content;
+  padding-left: 5.8rem;
+  padding-right: 5.8rem;
+  margin: 30px 0 0 0;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.learn-more-button {
+  @include secondary-button;
+  padding-left: 5.8rem;
+  padding-right: 5.8rem;
+  margin: 30px 0 0 0;
 }
