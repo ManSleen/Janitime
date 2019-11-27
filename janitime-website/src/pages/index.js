@@ -10,12 +10,15 @@ import clockInScreen from "../images/clock-in-screen.svg"
 import batteryScreen from "../images/battery-saver-screen.svg"
 import clockOutScreen from "../images/auto-clock-out-screen.svg"
 import trackingScreen from "../images/tracking-screen.svg"
+import cloud from "../images/cloud-illustration.svg"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="landing-container">
+      {/* Hero Top Section */}
+
       <section className="hero split">
         <div className="left">
           <h1>Your Janitorial Management System</h1>
@@ -23,7 +26,7 @@ const IndexPage = () => (
             No more missed cleanings, padded timesheets, calculation errors or
             paper inspections.
           </p>
-          <button className="hero-signup">
+          <button className="signup-button ">
             <Link to="/page-2/">Sign Up</Link>
           </button>
         </div>
@@ -137,6 +140,28 @@ const IndexPage = () => (
           </p>
         </div>
       </div>
+    </section>
+
+    {/* Cloud Section */}
+
+    <section className="info-section cloud-section">
+      <img src={cloud} alt="" />
+      <h2>All of this, available on your computer</h2>
+      <p>
+        Our web application allows you to manage employees, messages, billing
+        and building status. <br />
+        Daily reports keep you informed of the most important issues.
+        Everything, in a centralized spot.
+      </p>
+      <button className="learn-more-button">Learn More</button>
+    </section>
+
+    {/* Ready To Join? Section */}
+
+    <section className="info-section ready-to-join">
+      <h2>Ready to join?</h2>
+      <p>JaniTime's base plan is just $9.95 per month!</p>
+      <button className="signup-button">Sign Up</button>
     </section>
   </Layout>
 )
