@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
         </div>
       </div>
       <div className="nav-right-links">
-        <Link to="/">Features</Link>
+        <Link to="/features">Features</Link>
         <Link to="/">Getting Started</Link>
         <Link to="/">Pricing</Link>
         <button className="nav-button">Sign Up</button>

@@ -290,11 +290,16 @@ footer {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
-  .left,
-  .right {
-    width: 50%;
+  .left {
+    width: 45%;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .right {
+    width: 55%;
+    display: flex;
+
     justify-content: center;
   }
 }
