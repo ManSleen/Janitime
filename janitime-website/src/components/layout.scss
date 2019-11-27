@@ -290,11 +290,16 @@ footer {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
-  .left,
-  .right {
-    width: 50%;
+  .left {
+    width: 45%;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .right {
+    width: 55%;
+    display: flex;
+
     justify-content: center;
   }
 }
@@ -481,4 +486,40 @@ footer {
   padding-left: 5.8rem;
   padding-right: 5.8rem;
   margin: 30px 0 0 0;
+}
+
+.features-container {
+  text-align: center;
+  padding: 120px 0;
+  h2 {
+    margin-bottom: 80px;
+  }
+  .features-icons-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    margin: 0 auto;
+
+    .feature {
+      margin-bottom: 67px;
+      width: 32%;
+      text-align: center;
+      height: 6rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      p {
+        vertical-align: bottom;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 24px;
+        color: $black;
+        width: 100%;
+        margin-top: 26px;
+      }
+    }
+  }
 }

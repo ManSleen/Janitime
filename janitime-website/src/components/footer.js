@@ -20,7 +20,7 @@ const Footer = ({ siteTitle }) => {
           </div>
           <div className="footer-links">
             <h3>Janitime</h3>
-            <Link to="/">Features</Link>
+            <Link to="/features">Features</Link>
             <Link to="/">Getting Started</Link>
             <Link to="/">Pricing</Link>
             <Link to="/">Sign Up</Link>
