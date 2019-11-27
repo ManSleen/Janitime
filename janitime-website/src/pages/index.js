@@ -7,6 +7,9 @@ import computer from "../images/computer-icon.svg"
 import wallet from "../images/wallet.svg"
 import chart from "../images/chart.svg"
 import clockInScreen from "../images/clock-in-screen.svg"
+import batteryScreen from "../images/battery-saver-screen.svg"
+import clockOutScreen from "../images/auto-clock-out-screen.svg"
+import trackingScreen from "../images/tracking-screen.svg"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -17,7 +20,7 @@ const IndexPage = () => (
         <div className="left">
           <h1>Your Janitorial Management System</h1>
           <p>
-            No more missed cleanings, padded timesheets, calucation errors or
+            No more missed cleanings, padded timesheets, calculation errors or
             paper inspections.
           </p>
           <button className="hero-signup">
@@ -37,19 +40,19 @@ const IndexPage = () => (
         <div className="benefit-container">
           <p>Easy setup</p>
           <div className="benefit">
-            <img src={computer} />
+            <img src={computer} alt="" />
           </div>
         </div>
         <div className="benefit-container">
           <p>Intuitive interface</p>
           <div className="benefit">
-            <img src={chart} />
+            <img src={chart} alt="" />
           </div>
         </div>
         <div className="benefit-container">
           <p>Affordable</p>
           <div className="benefit">
-            <img src={wallet} />
+            <img src={wallet} alt="" />
           </div>
         </div>
       </div>
@@ -58,18 +61,80 @@ const IndexPage = () => (
 
     {/* Clock In Section */}
 
-    <section className="clock-in">
-      <div className="clock-in-container">
-        <div className="box clock-in-title">
-          <h2>Clock in with your phone</h2>
+    <section className="info-section clock-in">
+      <div className="info-section-container">
+        <div className="box info-section-text">
+          <h2>
+            Clock in with <br />
+            your phone
+          </h2>
           <p>
             Janitime is availible for both Android and iOS meaning everyone
             should be covered. This means employees can use Janitime by
             installing a single app.
           </p>
         </div>
-        <div className="box phone-screen">
-          <img src={clockInScreen} alt="clock in phone screen" />
+        <div className="box phone-screen-right">
+          <img src={clockInScreen} alt="Clock in phone screen" />
+        </div>
+      </div>
+    </section>
+
+    {/* Battery Saver Section */}
+
+    <section className="info-section battery-saver">
+      <div className="info-section-container">
+        <div className="box phone-screen-left">
+          <img src={batteryScreen} alt="Battery Saver phone screen" />
+        </div>
+        <div className="box info-section-text">
+          <h2>
+            Connect via the app’s “Battery <br />
+            Saver Mode”
+          </h2>
+          <p>
+            “Battery saver mode” allows employees to turn off map features in
+            order to save power. This ensures no one ends up with a dead device.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Auto GPS Section */}
+
+    <section className="info-section auto-gps">
+      <div className="info-section-container">
+        <div className="box info-section-text">
+          <h2>
+            Auto GPS clock
+            <br />
+            out
+          </h2>
+          <p>
+            Employee forgot to clock out? Janitime can do this automatically
+            when leaving the location of a job site.
+          </p>
+        </div>
+        <div className="box phone-screen-left">
+          <img src={clockOutScreen} alt="Auto clock out phone screen" />
+        </div>
+      </div>
+    </section>
+
+    {/* Real Time Tracking Section */}
+
+    <section className="info-section tracking">
+      <div className="info-section-container">
+        <div className="box phone-screen-left">
+          <img src={trackingScreen} alt="Real Time Tracking phone screen" />
+        </div>
+        <div className="box info-section-text">
+          <h2>Real time tracking</h2>
+          <p>
+            Janitime tracks employee location every 5 minutes, ensuring they are
+            on site. Think of it as the most efficient manager you have ever
+            had.
+          </p>
         </div>
       </div>
     </section>
