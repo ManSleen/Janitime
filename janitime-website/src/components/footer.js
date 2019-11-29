@@ -20,10 +20,18 @@ const Footer = ({ siteTitle }) => {
           </div>
           <div className="footer-links">
             <h3>Janitime</h3>
-            <Link to="/features">Features</Link>
-            <Link to="/">Getting Started</Link>
-            <Link to="/">Pricing</Link>
-            <Link to="/">Sign Up</Link>
+            <Link activeClassName="active-link" to="/features">
+              Features
+            </Link>
+            <Link activeClassName="active-link" to="/getting-started">
+              Getting Started
+            </Link>
+            <Link activeClassName="active-link" to="/pricing">
+              Pricing
+            </Link>
+            <Link activeClassName="active-link" to="/sign-up">
+              Sign Up
+            </Link>
           </div>
         </div>
         <div className="footer-contact-info">

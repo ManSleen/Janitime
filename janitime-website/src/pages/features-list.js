@@ -3,19 +3,18 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
-import features from "../images/features-hero.svg"
-import employee from "../images/icons/employee.svg"
-import house from "../images/icons/house.svg"
-import voicemail from "../images/icons/voicemail.svg"
-import clock from "../images/icons/clock.svg"
-import magnifying from "../images/icons/magnifying.svg"
-import clipboard from "../images/icons/clipboard.svg"
-import compass from "../images/icons/compass.svg"
-import battery from "../images/icons/battery.svg"
-import stopwatch from "../images/icons/stopwatch.svg"
-import phone from "../images/icons/phone.svg"
-import tracking from "../images/icons/tracking.svg"
-import telephone from "../images/icons/telephone.svg"
+import Employee from "../images/icons/Employee"
+import House from "../images/icons/House"
+import Voicemail from "../images/icons/Voicemail"
+import Clock from "../images/icons/Clock"
+import Magnifying from "../images/icons/Magnifying"
+import Clipboard from "../images/icons/Clipboard"
+import Compass from "../images/icons/Compass"
+import Battery from "../images/icons/Battery"
+import Stopwatch from "../images/icons/Stopwatch"
+import Phone from "../images/icons/Phone"
+import Tracking from "../images/icons/Tracking"
+import Telephone from "../images/icons/Telephone"
 
 import SEO from "../components/seo"
 
@@ -31,7 +30,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={employee} alt="" />
+              <Employee />
             </div>
             <div className="feature-list-text">
               <p>
@@ -45,7 +44,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={house} alt="" />
+              <House />
             </div>
             <div className="feature-list-text">
               <p>
@@ -59,7 +58,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={voicemail} alt="" />
+              <Voicemail />
             </div>
             <div className="feature-list-text">
               <p>
@@ -73,7 +72,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={clock} alt="" />
+              <Clock />
             </div>
             <div className="feature-list-text">
               <p>
@@ -86,7 +85,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={magnifying} alt="" />
+              <Magnifying />
             </div>
             <div className="feature-list-text">
               <p>
@@ -100,7 +99,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={clipboard} alt="" />
+              <Clipboard />
             </div>
             <div className="feature-list-text">
               <p>
@@ -118,7 +117,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={phone} alt="" />
+              <Phone />
             </div>
             <div className="feature-list-text">
               <p>
@@ -130,7 +129,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={compass} alt="" />
+              <Compass />
             </div>
             <div className="feature-list-text">
               <p>
@@ -143,7 +142,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={battery} alt="" />
+              <Battery />
             </div>
             <div className="feature-list-text">
               <p>
@@ -158,7 +157,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={stopwatch} alt="" />
+              <Stopwatch />
             </div>
             <div className="feature-list-text">
               <p>
@@ -171,7 +170,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={tracking} alt="" />
+              <Tracking />
             </div>
             <div className="feature-list-text">
               <p>
@@ -188,7 +187,7 @@ const FeaturesList = () => (
 
           <div className="feature-list-item">
             <div className="feature-list-icon">
-              <img src={telephone} alt="" />
+              <Telephone />
             </div>
             <div className="feature-list-text">
               <p>

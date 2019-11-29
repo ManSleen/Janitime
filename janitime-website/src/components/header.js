@@ -18,9 +18,15 @@ const Header = ({ siteTitle }) => (
         </div>
       </div>
       <div className="nav-right-links">
-        <Link to="/features">Features</Link>
-        <Link to="/">Getting Started</Link>
-        <Link to="/">Pricing</Link>
+        <Link activeClassName="active-link" to="/features">
+          Features
+        </Link>
+        <Link activeClassName="active-link" to="/getting-started">
+          Getting Started
+        </Link>
+        <Link activeClassName="active-link" to="/pricing">
+          Pricing
+        </Link>
         <button className="nav-button">Sign Up</button>
       </div>
     </nav>
