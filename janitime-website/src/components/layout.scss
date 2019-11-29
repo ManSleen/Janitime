@@ -136,7 +136,7 @@ body {
   margin: 0;
   width: 100%;
   .nav-container {
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
@@ -258,9 +258,9 @@ footer {
   flex-flow: column nowrap;
   width: 100%;
   .hero {
-    width: 60vw;
+    width: 65vw;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 100px 0;
     h1 {
       font-style: normal;
       font-weight: bold;
@@ -268,7 +268,7 @@ footer {
       line-height: 74px;
       letter-spacing: 0.06em;
       color: $black;
-      width: 90%;
+      width: 85%;
     }
     p {
       font-style: normal;
@@ -276,8 +276,8 @@ footer {
       font-size: 24px;
       line-height: 32px;
       letter-spacing: 0.08em;
-      color: $black;
-      margin: 30px 0 0 0;
+      color: $almost-black;
+      margin: 35px 0 10px 0;
       width: 80%;
     }
 
@@ -457,7 +457,7 @@ footer {
 
 .ready-to-join {
   text-align: center;
-  padding: 80px 0;
+  padding: 120px 0;
   background: $gray;
   h2 {
     text-align: center;
@@ -488,7 +488,7 @@ footer {
   margin: 30px 0 0 0;
 }
 
-.features-container {
+.more-features-container {
   text-align: center;
   padding: 120px 0;
   h2 {
@@ -519,6 +519,93 @@ footer {
         color: $black;
         width: 100%;
         margin-top: 26px;
+      }
+    }
+  }
+}
+
+.features-container {
+  text-align: center;
+  padding: 120px 0;
+  margin: 30px 0;
+  background: $gray;
+  .features-thirds-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 70%;
+    margin: 0 auto;
+    .features-third {
+      width: 29%;
+      img {
+        margin-bottom: 30px;
+      }
+      p {
+        width: 90%;
+        margin: 0 auto;
+        letter-spacing: 0.07em;
+      }
+    }
+  }
+}
+.full-feature-list-container {
+  background: url("../images/blob5.svg") no-repeat top 250px right,
+    url("../images/blob6.svg") no-repeat top 900px left;
+}
+.full-feature-list {
+  text-align: center;
+  margin: 120px auto;
+  width: 50%;
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: $black;
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 133%;
+    letter-spacing: 0.005em;
+    color: $black;
+  }
+  strong {
+    font-weight: bold;
+  }
+  .features-list-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    h3 {
+      align-self: center;
+      margin: 80px 0 20px 0;
+    }
+    .feature-list-item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      width: 100%;
+      margin: 25px 0;
+      .feature-list-icon {
+        width: 8%;
+        margin-top: 5px;
+      }
+      .feature-list-text {
+        width: 92%;
+        p {
+          width: 100%;
+        }
       }
     }
   }
