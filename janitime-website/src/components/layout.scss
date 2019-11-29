@@ -629,3 +629,45 @@ footer {
     }
   }
 }
+
+.testimonial {
+  width: 100%;
+  padding: 100px 0;
+  background: $gray;
+  .testimonial-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 60%;
+  }
+  .testimonial-image {
+    width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+  .testimonial-text {
+    padding: 0 0 0 100px;
+    box-sizing: border-box;
+    width: 60%;
+    h3 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 53px;
+      letter-spacing: 0.04em;
+      color: $black;
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 42px;
+      letter-spacing: 0.02em;
+      color: $almost-black;
+      margin-top: 20px;
+    }
+  }
+}

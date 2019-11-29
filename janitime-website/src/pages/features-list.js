@@ -20,7 +20,7 @@ import SEO from "../components/seo"
 
 const FeaturesList = () => (
   <Layout>
-    <SEO title="Features" />
+    <SEO title="Full Feature List" />
     <section className="info-section full-feature-list-container">
       <div className="full-feature-list">
         <h2>Full Feature List</h2>
