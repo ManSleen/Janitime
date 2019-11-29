@@ -2,10 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+
 import features from "../images/features-hero.svg"
 import employee from "../images/icons/employee.svg"
 import house from "../images/icons/house.svg"
-
 import voicemail from "../images/icons/voicemail.svg"
 import clock from "../images/icons/clock.svg"
 import magnifying from "../images/icons/magnifying.svg"
@@ -16,6 +16,9 @@ import stopwatch from "../images/icons/stopwatch.svg"
 import phone from "../images/icons/phone.svg"
 import hash from "../images/icons/hash.svg"
 import telephone from "../images/icons/telephone.svg"
+import features1 from "../images/features1.svg"
+import features2 from "../images/features2.svg"
+import features3 from "../images/features3.svg"
 
 import SEO from "../components/seo"
 
@@ -45,6 +48,37 @@ const Features = () => (
     {/* Features Section */}
 
     <section className="info-section features-container">
+      <h2>Features</h2>
+      <div className="features-thirds-container">
+        <div className="features-third">
+          <img src={features1} alt="" />
+          <h2>1.</h2>
+          <p>
+            Your employees now have 2 ways to punch in and out for the day! Be
+            sure your employees are on the job site with GPS geofencing on a
+            personal mobile device OR use our landline telephone system.
+          </p>
+        </div>
+        <div className="features-third">
+          <img src={features2} alt="" />
+          <h2>2.</h2>
+          <p>
+            Reimburse your field managers for the time and gas they spend going
+            from building to building. Via Google Mapping technology, always
+            know the exact distance and drive time between sites.
+          </p>
+        </div>
+        <div className="features-third">
+          <img src={features3} alt="" />
+          <h2>3.</h2>
+          <p>COMING SOON: Attendance Reward System</p>
+        </div>
+      </div>
+    </section>
+
+    {/* More Features Section */}
+
+    <section className="info-section more-features-container">
       <h2>More Features</h2>
       <div className="features-icons-container">
         <div className="feature">
