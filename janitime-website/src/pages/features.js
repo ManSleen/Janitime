@@ -133,7 +133,9 @@ const Features = () => (
           <p>Employee Call In</p>
         </div>
       </div>
-      <button className="learn-more-button">Learn More</button>
+      <Link to="/features-list">
+        <button className="learn-more-button">Learn More</button>
+      </Link>
     </section>
 
     {/* Ready To Join? Section */}
