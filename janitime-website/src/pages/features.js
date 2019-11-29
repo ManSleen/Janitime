@@ -3,22 +3,25 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
+// SVG Icon Files
 import features from "../images/features-hero.svg"
-import employee from "../images/icons/employee.svg"
-import house from "../images/icons/house.svg"
-import voicemail from "../images/icons/voicemail.svg"
-import clock from "../images/icons/clock.svg"
-import magnifying from "../images/icons/magnifying.svg"
-import clipboard from "../images/icons/clipboard.svg"
-import compass from "../images/icons/compass.svg"
-import battery from "../images/icons/battery.svg"
-import stopwatch from "../images/icons/stopwatch.svg"
-import phone from "../images/icons/phone.svg"
-import hash from "../images/icons/hash.svg"
-import telephone from "../images/icons/telephone.svg"
 import features1 from "../images/features1.svg"
 import features2 from "../images/features2.svg"
 import features3 from "../images/features3.svg"
+
+// SVG Icon Components
+import Employee from "../images/icons/Employee"
+import House from "../images/icons/House"
+import Voicemail from "../images/icons/Voicemail"
+import Clock from "../images/icons/Clock"
+import Magnifying from "../images/icons/Magnifying"
+import Clipboard from "../images/icons/Clipboard"
+import Compass from "../images/icons/Compass"
+import Battery from "../images/icons/Battery"
+import Stopwatch from "../images/icons/Stopwatch"
+import Phone from "../images/icons/Phone"
+import Hash from "../images/icons/Hash"
+import Telephone from "../images/icons/Telephone"
 
 import SEO from "../components/seo"
 
@@ -82,55 +85,79 @@ const Features = () => (
       <h2>More Features</h2>
       <div className="features-icons-container">
         <div className="feature">
-          <img src={employee} alt="" />
-          <p>Employee Management</p>
+          <Link to="/features-list">
+            <Employee />
+            <p>Employee Management</p>
+          </Link>
         </div>
         <div className="feature">
-          <img src={house} alt="" />
-          <p>Building Management</p>
+          <Link to="/features-list">
+            <House />
+            <p>Building Management</p>
+          </Link>
         </div>
         <div className="feature">
-          <img src={voicemail} alt="" />
-          <p>Personalized Voicemail Messages</p>
-        </div>
-
-        <div className="feature">
-          <img src={clock} alt="" />
-          <p>Weekly Timecard Manager</p>
-        </div>
-        <div className="feature">
-          <img src={magnifying} alt="" />
-          <p>Quality Inspections</p>
-        </div>
-        <div className="feature">
-          <img src={clipboard} alt="" />
-          <p>Generate Reports</p>
+          <Link to="/features-list">
+            <Voicemail />
+            <p>Personalized Voicemail Messages</p>
+          </Link>
         </div>
 
         <div className="feature">
-          <img src={compass} alt="" />
-          <p>GPS Clock In</p>
+          <Link to="/features-list">
+            <Clock />
+            <p>Weekly Timecard Manager</p>
+          </Link>
         </div>
         <div className="feature">
-          <img src={battery} alt="" />
-          <p>Battery Saver Mode</p>
+          <Link to="/features-list">
+            <Magnifying />
+            <p>Quality Inspections</p>
+          </Link>
         </div>
         <div className="feature">
-          <img src={stopwatch} alt="" />
-          <p>Auto Clock Out</p>
+          <Link to="/features-list">
+            <Clipboard />
+            <p>Generate Reports</p>
+          </Link>
         </div>
 
         <div className="feature">
-          <img src={phone} alt="" />
-          <p>Android and iOS</p>
+          <Link to="/features-list">
+            <Compass />
+            <p>GPS Clock In</p>
+          </Link>
         </div>
         <div className="feature">
-          <img src={hash} alt="" />
-          <p>Unique Employee Number</p>
+          <Link to="/features-list">
+            <Battery />
+            <p>Battery Saver Mode</p>
+          </Link>
         </div>
         <div className="feature">
-          <img src={telephone} alt="" />
-          <p>Employee Call In</p>
+          <Link to="/features-list">
+            <Stopwatch />
+            <p>Auto Clock Out</p>
+          </Link>
+        </div>
+
+        <div className="feature">
+          <Link to="/features-list">
+            <Phone />
+            <p>Android and iOS</p>
+          </Link>
+        </div>
+        <div className="feature">
+          <Link to="/features-list">
+            <Hash />
+            <p>Unique Employee Number</p>
+          </Link>
+        </div>
+        <div className="feature">
+          <Link to="/features-list">
+            <Telephone />
+            <p>Employee Call In</p>
+          </Link>
         </div>
       </div>
       <Link to="/features-list">
