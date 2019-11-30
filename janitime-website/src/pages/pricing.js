@@ -56,31 +56,33 @@ const Pricing = () => (
     </section>
 
     <section className="info-section pricing-slider-container">
-      <h2>How many employees do you have?</h2>
-      {/* <input type="range" min="1" max="100" class="slider" id="myRange"></input> */}
-      <div className="slider-container">
-        <Slider
-          min={1}
-          max={10}
-          defaultValue={5}
-          className="slider"
-          trackStyle={{ backgroundColor: "#92CDC8", height: 10 }}
-          handleStyle={{
-            border: "solid 5px #36BDB2",
-            height: 38,
-            width: 38,
-            marginLeft: -14,
-            marginTop: -14,
-            backgroundColor: "white",
-          }}
-          railStyle={{ backgroundColor: "#CFD0D5", height: 10 }}
-        />
+      <div className="pricing-inner-container">
+        <h2>How many employees do you have?</h2>
+        {/* <input type="range" min="1" max="100" class="slider" id="myRange"></input> */}
+        <div className="slider-container">
+          <Slider
+            min={1}
+            max={10}
+            defaultValue={5}
+            className="slider"
+            trackStyle={{ backgroundColor: "#92CDC8", height: 10 }}
+            handleStyle={{
+              border: "solid 5px #36BDB2",
+              height: 38,
+              width: 38,
+              marginLeft: -14,
+              marginTop: -14,
+              backgroundColor: "white",
+            }}
+            railStyle={{ backgroundColor: "#CFD0D5", height: 10 }}
+          />
+        </div>
       </div>
     </section>
 
     {/* Pricing is Simple Section */}
 
-    <section className="info-section ready-to-join rtj-white">
+    <section className="info-section ready-to-join rtj-gray">
       <h2>Pricing is simple </h2>
       <p>
         Simply pay a $9.95 monthly access fee and a 10¢ per minute call charge

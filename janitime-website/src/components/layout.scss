@@ -477,6 +477,9 @@ footer {
 .rtj-white {
   background: $white;
 }
+.rtj-gray {
+  background: $gray;
+}
 .signup-button {
   @include button;
   width: fit-content;
@@ -677,13 +680,21 @@ footer {
 .pricing-slider-container {
   text-align: center;
   height: fit-content;
-  padding: 8rem;
+  margin: 0 auto;
+  background: $gray;
+  width: 100%;
   h2 {
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
+  }
+  .pricing-inner-container {
+    width: 70%;
+    margin: 0 auto;
+    background: $white;
+    padding: 120px 80px;
   }
 }
 
 .slider-container {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
