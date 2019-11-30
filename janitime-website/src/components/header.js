@@ -27,7 +27,9 @@ const Header = ({ siteTitle }) => (
         <Link activeClassName="active-link" to="/pricing">
           Pricing
         </Link>
-        <button className="nav-button">Sign Up</button>
+        <Link to="/sign-up">
+          <button className="nav-button">Sign Up</button>
+        </Link>
       </div>
     </nav>
   </header>

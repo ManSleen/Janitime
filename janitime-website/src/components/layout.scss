@@ -149,12 +149,16 @@ body {
 
     .nav-right-links {
       a {
-        margin-right: 47px;
+        margin-left: 47px;
         color: $black;
         font-size: 0.95rem;
         font-style: normal;
         font-weight: normal;
         line-height: 24px;
+        box-sizing: border-box;
+        &:hover {
+          font-weight: bold;
+        }
       }
       .active-link {
         font-weight: bold;
@@ -222,6 +226,9 @@ footer {
       font-style: normal;
       font-weight: normal;
       margin-bottom: 22px;
+      &:hover {
+        font-weight: bold;
+      }
     }
     .active-link {
       font-weight: bold;
@@ -486,9 +493,15 @@ footer {
   padding-left: 5.8rem;
   padding-right: 5.8rem;
   margin: 30px 0 0 0;
+  transition: transform 300ms ease-out, box-shadow 300ms;
+
   a {
     text-decoration: none;
     color: $white;
+  }
+  &:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 15px 20px rgba(97, 97, 97, 0.212);
   }
 }
 
@@ -497,6 +510,10 @@ footer {
   padding-left: 5.8rem;
   padding-right: 5.8rem;
   margin: 30px 0 0 0;
+}
+
+#signup-submit-button {
+  width: 100%;
 }
 
 .more-features-container {
@@ -691,6 +708,16 @@ footer {
     margin: 0 auto;
     background: $white;
     padding: 120px 80px;
+    h3 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 24px;
+      /* or 80% */
+      text-align: center;
+      color: $black;
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -701,7 +728,7 @@ footer {
 
 .sign-up-container {
   text-align: center;
-  margin: 120px 0;
+  padding: 120px 0;
   background: url("../images/blob7.svg") top 200px left no-repeat,
     url("../images/blob8.svg") top 600px right no-repeat;
   h3 {
@@ -728,6 +755,61 @@ footer {
     }
   }
   .ready-heading {
-    margin-top: 6rem;
+    margin: 6rem 0 4rem 0;
+  }
+}
+
+.sign-up-form-container {
+  width: 40%;
+  margin: 0 auto;
+  h4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    /* or 100% */
+    display: flex;
+    align-items: center;
+    color: $black;
+    margin-bottom: 3rem;
+  }
+  .sign-up-label {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.11em;
+    color: $almost-black;
+    display: block;
+    text-align: left;
+  }
+  .firstLastName {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .name-input {
+    width: calc(50% - 10px);
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 11px;
+    margin: 5px 0 2rem 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    letter-spacing: 0.11em;
+  }
+  textarea {
+    height: 6rem;
   }
 }
