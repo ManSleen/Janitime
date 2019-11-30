@@ -57,20 +57,40 @@ const Pricing = () => (
 
     <section className="info-section pricing-slider-container">
       <div className="pricing-inner-container">
-        <h2>How many employees do you have?</h2>
+        <h3>How many employees do you have?</h3>
         {/* <input type="range" min="1" max="100" class="slider" id="myRange"></input> */}
         <div className="slider-container">
           <Slider
-            min={1}
-            max={10}
-            defaultValue={5}
+            min={0}
+            max={250}
+            dots
+            dotStyle={{ border: "red", height: "10px" }}
+            activeDotStyle={{
+              border: "red",
+              height: "40px",
+              marginTop: "10px",
+            }}
+            marks={{
+              25: 25,
+              50: 50,
+              75: 75,
+              100: 100,
+              125: 125,
+              150: 150,
+              175: 175,
+              200: 200,
+              225: 225,
+              250: 250,
+            }}
+            step={25}
+            defaultValue={25}
             className="slider"
             trackStyle={{ backgroundColor: "#92CDC8", height: 10 }}
             handleStyle={{
-              border: "solid 5px #36BDB2",
+              border: "solid 4.5px #36BDB2",
               height: 38,
               width: 38,
-              marginLeft: -14,
+              marginLeft: 0,
               marginTop: -14,
               backgroundColor: "white",
             }}
@@ -83,7 +103,7 @@ const Pricing = () => (
     {/* Pricing is Simple Section */}
 
     <section className="info-section ready-to-join rtj-gray">
-      <h2>Pricing is simple </h2>
+      <h2>Pricing is simple</h2>
       <p>
         Simply pay a $9.95 monthly access fee and a 10¢ per minute call charge
         for each month of service.
