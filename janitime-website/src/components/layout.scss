@@ -698,3 +698,36 @@ footer {
   width: 100%;
   margin: 0 auto;
 }
+
+.sign-up-container {
+  text-align: center;
+  margin: 120px 0;
+  background: url("../images/blob7.svg") top 200px left no-repeat,
+    url("../images/blob8.svg") top 600px right no-repeat;
+  h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: $black;
+    margin: 3rem;
+  }
+  p {
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 38px;
+    /* or 181% */
+    align-items: center;
+    text-align: center;
+    strong {
+      font-weight: bold;
+    }
+  }
+  .ready-heading {
+    margin-top: 6rem;
+  }
+}

@@ -9,6 +9,7 @@ exports.components = {
   "component---src-pages-getting-started-js": () => import("../src/pages/getting-started.js" /* webpackChunkName: "component---src-pages-getting-started-js" */),
   "component---src-pages-index-js": () => import("../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-page-2-js": () => import("../src/pages/page-2.js" /* webpackChunkName: "component---src-pages-page-2-js" */),
-  "component---src-pages-pricing-js": () => import("../src/pages/pricing.js" /* webpackChunkName: "component---src-pages-pricing-js" */)
+  "component---src-pages-pricing-js": () => import("../src/pages/pricing.js" /* webpackChunkName: "component---src-pages-pricing-js" */),
+  "component---src-pages-sign-up-js": () => import("../src/pages/sign-up.js" /* webpackChunkName: "component---src-pages-sign-up-js" */)
 }
 
