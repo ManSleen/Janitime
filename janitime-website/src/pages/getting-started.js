@@ -27,15 +27,17 @@ const GettingStarted = () => (
           </button>
         </div>
         <div className="right">
-          <img src={gettingStartedHero} alt="janitime" />
+          <img src={gettingStartedHero} alt="getting started" />
         </div>
       </section>
     </div>
 
+    {/* Testimonial Section */}
+
     <section className="info-section testimonial">
       <div className="testimonial-container">
         <div className="testimonial-image">
-          <img src={building} alt="artistic building image" />
+          <img src={building} alt="artistic building" />
         </div>
         <div className="testimonial-text">
           <h3>

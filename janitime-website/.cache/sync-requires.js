@@ -11,6 +11,7 @@ exports.components = {
   "component---src-pages-features-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\Janitime\\janitime-website\\src\\pages\\features.js"))),
   "component---src-pages-getting-started-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\Janitime\\janitime-website\\src\\pages\\getting-started.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\Janitime\\janitime-website\\src\\pages\\index.js"))),
-  "component---src-pages-page-2-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\Janitime\\janitime-website\\src\\pages\\page-2.js")))
+  "component---src-pages-page-2-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\Janitime\\janitime-website\\src\\pages\\page-2.js"))),
+  "component---src-pages-pricing-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\Janitime\\janitime-website\\src\\pages\\pricing.js")))
 }
 
