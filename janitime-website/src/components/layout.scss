@@ -474,7 +474,9 @@ footer {
     margin: 0 auto;
   }
 }
-
+.rtj-white {
+  background: $white;
+}
 .signup-button {
   @include button;
   width: fit-content;

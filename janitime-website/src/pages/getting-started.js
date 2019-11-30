@@ -54,7 +54,7 @@ const GettingStarted = () => (
 
     {/* Ready To Join? Section */}
 
-    <section className="info-section ready-to-join">
+    <section className="info-section ready-to-join rtj-white">
       <h2>Ready to join?</h2>
       <p>JaniTime's base plan is just $9.95 per month!</p>
       <button className="signup-button">Sign Up</button>
