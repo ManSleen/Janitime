@@ -64,23 +64,31 @@ const Pricing = () => (
             min={0}
             max={250}
             dots
-            dotStyle={{ border: "red", height: "10px" }}
+            dotStyle={{
+              width: "5px",
+              border: "none",
+              borderRadius: "0",
+              height: "20px",
+              bottom: "-10px",
+            }}
             activeDotStyle={{
-              border: "red",
-              height: "40px",
-              marginTop: "10px",
+              border: "none",
+              borderRadius: "0",
+              height: "20px",
+              bottom: "-10px",
             }}
             marks={{
-              25: 25,
-              50: 50,
-              75: 75,
-              100: 100,
-              125: 125,
-              150: 150,
-              175: 175,
-              200: 200,
-              225: 225,
-              250: 250,
+              0: { style: { marginTop: "25px" }, label: 0 },
+              25: { style: { marginTop: "25px" }, label: 25 },
+              50: { style: { marginTop: "25px" }, label: 50 },
+              75: { style: { marginTop: "25px" }, label: 75 },
+              100: { style: { marginTop: "25px" }, label: 100 },
+              125: { style: { marginTop: "25px" }, label: 125 },
+              150: { style: { marginTop: "25px" }, label: 150 },
+              175: { style: { marginTop: "25px" }, label: 175 },
+              200: { style: { marginTop: "25px" }, label: 200 },
+              225: { style: { marginTop: "25px" }, label: 225 },
+              250: { style: { marginTop: "25px" }, label: 250 },
             }}
             step={25}
             defaultValue={25}

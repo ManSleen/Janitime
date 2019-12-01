@@ -149,9 +149,8 @@ const IndexPage = () => (
       <h2>All of this, available on your computer</h2>
       <p>
         Our web application allows you to manage employees, messages, billing
-        and building status. <br />
-        Daily reports keep you informed of the most important issues.
-        Everything, in a centralized spot.
+        and building status. Daily reports keep you informed of the most
+        important issues. Everything, in a centralized spot.
       </p>
       <button className="learn-more-button">Learn More</button>
     </section>
