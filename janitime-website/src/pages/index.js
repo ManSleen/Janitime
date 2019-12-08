@@ -152,7 +152,9 @@ const IndexPage = () => (
     <section className="info-section ready-to-join">
       <h2>Ready to join?</h2>
       <p>JaniTime's base plan is just $9.95 per month!</p>
-      <button className="signup-button">Sign Up</button>
+      <Link to="/sign-up/">
+        <button className="signup-button ">Sign Up</button>
+      </Link>
     </section>
   </Layout>
 )

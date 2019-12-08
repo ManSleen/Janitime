@@ -18,7 +18,10 @@ const Pricing = () => (
 
       <section className="hero split">
         <div className="left">
-          <h1>Timekeeping... that pays for itself</h1>
+          <h1>
+            Timekeeping... <br />
+            that pays for itself
+          </h1>
           <p>
             Simply pay a low monthly access fee + a per minute call charge for
             each month of service.
@@ -117,7 +120,9 @@ const Pricing = () => (
         Simply pay a $9.95 monthly access fee and a 10¢ per minute call charge
         for each month of service.
       </p>
-      <button className="signup-button">Sign Up</button>
+      <Link to="/sign-up/">
+        <button className="signup-button ">Sign Up</button>
+      </Link>
     </section>
   </Layout>
 )
