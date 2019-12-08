@@ -23,9 +23,10 @@ const Pricing = () => (
             Simply pay a low monthly access fee + a per minute call charge for
             each month of service.
           </p>
-          <button className="signup-button ">
-            <Link to="/page-2/">Sign Up</Link>
-          </button>
+
+          <Link to="/sign-up/">
+            <button className="signup-button ">Sign Up</button>
+          </Link>
         </div>
         <div className="right">
           <img src={pricingHero} alt="janitime" />

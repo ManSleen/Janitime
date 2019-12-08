@@ -38,9 +38,10 @@ const Features = () => (
             Live tracking, auto clock-out and battery-saver mode mean no more
             missed cleanings.
           </p>
-          <button className="signup-button ">
-            <Link to="/page-2/">Sign Up</Link>
-          </button>
+
+          <Link to="/sign-up/">
+            <button className="signup-button ">Sign Up</button>
+          </Link>
         </div>
         <div className="right">
           <img src={features} alt="janitime" />
