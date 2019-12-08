@@ -156,16 +156,15 @@ body {
 
     .nav-right-links {
       a {
-        margin-left: 47px;
-        color: $black;
-        font-size: 0.95rem;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 24px;
-        box-sizing: border-box;
-        &:hover {
-          font-weight: bold;
-        }
+        @include interpolate(
+          margin-left,
+          $min-screen-size,
+          $max-screen-size,
+          18px,
+          50px
+        );
+        width: 100px;
+        @include nav-links;
       }
       .active-link {
         font-weight: bold;
@@ -197,6 +196,13 @@ body {
     line-height: 50px;
     letter-spacing: 0.07em;
     font-size: 30px;
+    @include interpolate(
+      font-size,
+      $min-screen-size,
+      $max-screen-size,
+      18px,
+      30px
+    );
     font-style: normal;
     font-weight: normal;
     display: inline-block;
@@ -213,7 +219,14 @@ footer {
   text-align: center;
   background: $gray;
   h3 {
-    font-size: 24px;
+    // font-size: 24px;
+    @include interpolate(
+      font-size,
+      $min-screen-size,
+      $max-screen-size,
+      16px,
+      24px
+    );
     line-height: 24px;
     color: $black;
     margin-bottom: 22px;
@@ -229,10 +242,15 @@ footer {
     margin-left: 80px;
     a {
       display: block;
-      font-size: 0.95rem;
-      font-style: normal;
-      font-weight: normal;
-      margin-bottom: 22px;
+      @include nav-links;
+      // margin-bottom: 22px;
+      @include interpolate(
+        margin-bottom,
+        $min-screen-size,
+        $max-screen-size,
+        12px,
+        22px
+      );
       &:hover {
         font-weight: bold;
       }
@@ -262,7 +280,14 @@ footer {
     .footer-contact-info {
       justify-self: flex-end;
       p {
-        font-size: 21px;
+        // font-size: 21px;
+        @include interpolate(
+          font-size,
+          $min-screen-size,
+          $max-screen-size,
+          14px,
+          21px
+        );
         display: inline-block;
         line-height: 24px;
         vertical-align: middle;
@@ -270,7 +295,14 @@ footer {
 
       img {
         display: inline-block;
-        width: 24px;
+        // width: 24px;
+        @include interpolate(
+          width,
+          $min-screen-size,
+          $max-screen-size,
+          14px,
+          24px
+        );
         margin-right: 16px;
         padding: 0;
 
@@ -307,7 +339,7 @@ footer {
         width,
         $min-screen-size,
         $max-screen-size,
-        200px,
+        175px,
         700px
       );
     }
@@ -410,7 +442,7 @@ footer {
       $min-screen-size,
       $max-screen-size,
       16px,
-      30px
+      34px
     );
   }
   p {
@@ -625,7 +657,7 @@ footer {
       margin-bottom,
       $min-screen-size,
       $max-screen-size,
-      60px,
+      40px,
       80px
     );
   }
@@ -653,7 +685,7 @@ footer {
         18px,
         67px
       );
-      width: 32%;
+      width: 33%;
       text-align: center;
       height: 6rem;
       display: flex;
@@ -816,7 +848,14 @@ footer {
 
 .testimonial {
   width: 100%;
-  padding: 100px 0;
+  padding: 0;
+  @include interpolate(
+    (padding-top, padding-bottom),
+    $min-screen-size,
+    $max-screen-size,
+    50px,
+    100px
+  );
   background: $gray;
   .testimonial-container {
     display: flex;
@@ -824,10 +863,24 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
-    width: 60%;
+    // width: 60%;
+    @include interpolate(
+      width,
+      $min-screen-size,
+      $max-screen-size,
+      400px,
+      1100px
+    );
   }
   .testimonial-image {
-    width: 40%;
+    // width: 40%;
+    @include interpolate(
+      width,
+      $min-screen-size,
+      $max-screen-size,
+      200px,
+      500px
+    );
     img {
       width: 100%;
     }
@@ -836,21 +889,40 @@ footer {
     padding: 0 0 0 100px;
     box-sizing: border-box;
     width: 60%;
+    @include interpolate(
+      width,
+      $min-screen-size,
+      $max-screen-size,
+      300px,
+      700px
+    );
     h3 {
       font-style: normal;
       font-weight: bold;
-      font-size: 30px;
-      line-height: 53px;
+      // font-size: 30px;
+      @include interpolate(
+        font-size,
+        $min-screen-size,
+        $max-screen-size,
+        14px,
+        30px
+      );
+      @include interpolate(
+        line-height,
+        $min-screen-size,
+        $max-screen-size,
+        25px,
+        53px
+      );
+      // line-height: 53px;
       letter-spacing: 0.04em;
       color: $black;
     }
     p {
       font-style: normal;
       font-weight: normal;
-      font-size: 21px;
-      line-height: 42px;
+      @include paragraph-text;
       letter-spacing: 0.02em;
-      color: $almost-black;
       margin-top: 20px;
     }
   }
@@ -928,8 +1000,22 @@ footer {
     width: 100%;
     font-style: normal;
     font-weight: normal;
-    font-size: 21px;
-    line-height: 38px;
+    // font-size: 21px;
+    // line-height: 38px;
+    @include interpolate(
+      font-size,
+      $min-screen-size,
+      $max-screen-size,
+      16px,
+      21px
+    );
+    @include interpolate(
+      line-height,
+      $min-screen-size,
+      $max-screen-size,
+      20px,
+      38px
+    );
     /* or 181% */
     align-items: center;
     text-align: center;
@@ -943,7 +1029,8 @@ footer {
 }
 
 .sign-up-form-container {
-  width: 40%;
+  // width: 40%;
+  @include interpolate(width, $min-screen-size, $max-screen-size, 400px, 600px);
   margin: 0 auto;
   h4 {
     font-style: normal;

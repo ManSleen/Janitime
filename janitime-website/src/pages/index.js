@@ -108,7 +108,7 @@ const IndexPage = () => (
             when leaving the location of a job site.
           </p>
         </div>
-        <div className="box phone-screen-left">
+        <div className="box phone-screen-right">
           <img src={clockOutScreen} alt="Auto clock out phone screen" />
         </div>
       </div>
