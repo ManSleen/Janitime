@@ -1,5 +1,52 @@
 @import "./palette";
 
+// Fluid typography mixin
+
+@mixin interpolate(
+  $properties,
+  $min-screen,
+  $max-screen,
+  $min-value,
+  $max-value
+) {
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-screen) {
+      @each $property in $properties {
+        #{$property}: calc-interpolation(
+          $min-screen,
+          $min-value,
+          $max-screen,
+          $max-value
+        );
+      }
+    }
+
+    @media screen and (min-width: $max-screen) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
+
+// Requires the calc-interpolation function which can also be used independently
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+  $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+  $b: $min-value - $a * $min-screen;
+
+  $sign: "+";
+  @if ($b < 0) {
+    $sign: "-";
+    $b: abs($b);
+  }
+  @return calc(#{$a * 100}vw #{$sign} #{$b});
+}
+
 @mixin button {
   border: none;
   border-radius: 10px;
@@ -7,33 +54,97 @@
   cursor: pointer;
   outline: none;
   text-align: center;
-  padding: 12px 0;
+  // padding: 12px 0;
+  @include interpolate(
+    (padding-top, padding-bottom),
+    $min-screen-size,
+    $max-screen-size,
+    8px,
+    12px
+  );
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    16px,
+    24px
+  );
   color: $white;
-  font-size: 1rem;
+  // font-size: 1rem;
   font-weight: bold;
-  line-height: 24px;
+  // line-height: 24px;
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    12px,
+    16px
+  );
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    16px,
+    24px
+  );
 }
 
 @mixin secondary-button {
   border: 2px solid $dark-blue;
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 12px 0;
+  // padding: 12px 0;
+  @include interpolate(
+    (padding-top, padding-bottom),
+    $min-screen-size,
+    $max-screen-size,
+    8px,
+    12px
+  );
   color: $dark-blue;
   cursor: pointer;
   outline: none;
   text-align: center;
   font-size: 1rem;
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    12px,
+    16px
+  );
   font-weight: bold;
-  line-height: 24px;
+  // line-height: 24px;
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    16px,
+    24px
+  );
   background: none;
 }
 
 @mixin hero-header {
   font-style: normal;
   font-weight: bold;
-  font-size: 3.6rem;
-  line-height: 74px;
+  // font-size: 3.6rem;
+  // font-size: calc(20px + (56 - 20) * ((100vw - 1000px) / (1600 - 1000)));
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    18px,
+    56px
+  );
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    24px,
+    74px
+  );
+  // line-height: 74px;
   letter-spacing: 0.06em;
   color: $black;
 }
@@ -45,22 +156,71 @@
   line-height: 32px;
   letter-spacing: 0.08em;
   color: $almost-black;
-  margin: 35px 0 10px 0;
+  margin: 0 0 10px 0;
+  @include interpolate(
+    margin-top,
+    $min-screen-size,
+    $max-screen-size,
+    16px,
+    35px
+  );
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    12px,
+    24px
+  );
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    16px,
+    32px
+  );
 }
 
 @mixin header2 {
   font-style: normal;
   font-weight: bold;
-  font-size: 3.2rem;
-  line-height: 60px;
+  // font-size: 3.2rem;
+  // line-height: 60px;
   letter-spacing: 0.01em;
   color: $black;
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    24px,
+    48px
+  );
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    30px,
+    60px
+  );
 }
 @mixin paragraph-text {
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
-  line-height: 35px;
+  // font-size: 21px;
+  // line-height: 35px;
   align-items: center;
   color: $almost-black;
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    14px,
+    21px
+  );
+  @include interpolate(
+    line-height,
+    $min-screen-size,
+    $max-screen-size,
+    20px,
+    35px
+  );
 }
