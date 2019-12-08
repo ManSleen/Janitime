@@ -26,9 +26,11 @@ const IndexPage = () => (
             No more missed cleanings, padded timesheets, calculation errors or
             paper inspections.
           </p>
-          <button className="signup-button ">
-            <Link to="/page-2/">Sign Up</Link>
-          </button>
+
+          <Link to="/sign-up/">
+            {" "}
+            <button className="signup-button ">Sign Up</button>
+          </Link>
         </div>
         <div className="right">
           <img src={illustration} alt="janitime" />

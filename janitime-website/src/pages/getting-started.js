@@ -22,9 +22,10 @@ const GettingStarted = () => (
             Simply contact us and follow simple steps to start using Janitime as
             a solution for you and your employees.
           </p>
-          <button className="signup-button ">
-            <Link to="/page-2/">Sign Up</Link>
-          </button>
+
+          <Link to="/sign-up/">
+            <button className="signup-button ">Sign Up</button>
+          </Link>
         </div>
         <div className="right">
           <img src={gettingStartedHero} alt="getting started" />
