@@ -67,10 +67,7 @@ const IndexPage = () => (
     <section className="info-section clock-in">
       <div className="info-section-container">
         <div className="box info-section-text">
-          <h2>
-            Clock in with <br />
-            your phone
-          </h2>
+          <h2>Clock in with your phone</h2>
           <p>
             Janitime is availible for both Android and iOS meaning everyone
             should be covered. This means employees can use Janitime by
@@ -91,10 +88,7 @@ const IndexPage = () => (
           <img src={batteryScreen} alt="Battery Saver phone screen" />
         </div>
         <div className="box info-section-text">
-          <h2>
-            Connect via the app’s “Battery <br />
-            Saver Mode”
-          </h2>
+          <h2>Connect via the app’s “Battery Saver Mode”</h2>
           <p>
             “Battery saver mode” allows employees to turn off map features in
             order to save power. This ensures no one ends up with a dead device.
@@ -108,11 +102,7 @@ const IndexPage = () => (
     <section className="info-section auto-gps">
       <div className="info-section-container">
         <div className="box info-section-text">
-          <h2>
-            Auto GPS clock
-            <br />
-            out
-          </h2>
+          <h2>Auto GPS clock out</h2>
           <p>
             Employee forgot to clock out? Janitime can do this automatically
             when leaving the location of a job site.
