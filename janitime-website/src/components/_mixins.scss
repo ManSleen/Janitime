@@ -55,6 +55,11 @@
   outline: none;
   text-align: center;
   // padding: 12px 0;
+  transition: transform 300ms ease-out, box-shadow 300ms;
+  &:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 10px 18px rgba(24, 144, 255, 0.3);
+  }
   @include interpolate(
     (padding-top, padding-bottom),
     $min-screen-size,
@@ -93,7 +98,13 @@
   border: 2px solid $dark-blue;
   box-sizing: border-box;
   border-radius: 10px;
+  transition: transform 300ms ease-out, box-shadow 300ms;
+  &:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 10px 18px rgba(24, 144, 255, 0.3);
+  }
   // padding: 12px 0;
+
   @include interpolate(
     (padding-top, padding-bottom),
     $min-screen-size,
@@ -152,8 +163,8 @@
 @mixin hero-paragraph {
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 32px;
+  // font-size: 24px;
+  // line-height: 32px;
   letter-spacing: 0.08em;
   color: $almost-black;
   margin: 0 0 10px 0;
@@ -223,4 +234,23 @@
     20px,
     35px
   );
+}
+
+@mixin nav-links {
+  color: $black;
+  font-size: 0.95rem;
+  @include interpolate(
+    font-size,
+    $min-screen-size,
+    $max-screen-size,
+    12px,
+    15px
+  );
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  box-sizing: border-box;
+  &:hover {
+    font-weight: bold;
+  }
 }
