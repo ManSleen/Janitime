@@ -100,7 +100,7 @@ const Features = () => (
         <div className="feature">
           <Link to="/features-list">
             <Voicemail />
-            <p>Personalized Voicemail Messages</p>
+            <p>Personalized Voicemail</p>
           </Link>
         </div>
 

@@ -23,8 +23,9 @@ const IndexPage = () => (
         <div className="left">
           <h1>Your Janitorial Management System</h1>
           <p>
-            No more missed cleanings, padded timesheets, calculation errors or
-            paper inspections.
+            Clock in with our mobile application or call into our phone system.
+            Many janitors still do not have smartphones and batteries often die.
+            When you need both clock in methods, JaniTime is your answer.
           </p>
 
           <Link to="/sign-up/">
@@ -69,11 +70,15 @@ const IndexPage = () => (
     <section className="info-section clock-in">
       <div className="info-section-container">
         <div className="box info-section-text">
-          <h2>Clock in with your phone</h2>
+          <h2>
+            Clock in/out with
+            <br /> your smartphone
+          </h2>
           <p>
-            Janitime is availible for both Android and iOS meaning everyone
-            should be covered. This means employees can use Janitime by
-            installing a single app.
+            Our smartphone app is included without any extra charges. For staff
+            that have smartphones this is the simplest way of clocking in and
+            out of their buildings. All your associate has to do is enter the
+            building code and press the clock in/out button.
           </p>
         </div>
         <div className="box phone-screen-right">
@@ -84,7 +89,7 @@ const IndexPage = () => (
 
     {/* Battery Saver Section */}
 
-    <section className="info-section battery-saver">
+    {/* <section className="info-section battery-saver">
       <div className="info-section-container">
         <div className="box phone-screen-left">
           <img src={batteryScreen} alt="Battery Saver phone screen" />
@@ -97,6 +102,24 @@ const IndexPage = () => (
           </p>
         </div>
       </div>
+    </section> */}
+
+    {/* Real Time Tracking Section */}
+
+    <section className="info-section tracking">
+      <div className="info-section-container reverse">
+        <div className="box phone-screen-left">
+          <img src={trackingScreen} alt="Real Time Tracking phone screen" />
+        </div>
+        <div className="box info-section-text">
+          <h2>Real time tracking</h2>
+          <p>
+            You think an employee is doing something fishy? Turn on tracking and
+            watch their bread crumbs in real time or after on your JaniTime
+            website.
+          </p>
+        </div>
+      </div>
     </section>
 
     {/* Auto GPS Section */}
@@ -104,10 +127,13 @@ const IndexPage = () => (
     <section className="info-section auto-gps">
       <div className="info-section-container">
         <div className="box info-section-text">
-          <h2>Auto GPS clock out</h2>
+          <h2>Forgot to clock out? No more!</h2>
           <p>
-            Employee forgot to clock out? Janitime can do this automatically
-            when leaving the location of a job site.
+            We wrap your buildings with an imaginary barrier called a geofence.
+            When your staff steps out of it they are clocked out. This means you
+            are no longer paying for employees forgetting to clock out. This
+            eliminates time card fraud from cleaners doing other activities
+            while on the clock.
           </p>
         </div>
         <div className="box phone-screen-right">
@@ -116,42 +142,29 @@ const IndexPage = () => (
       </div>
     </section>
 
-    {/* Real Time Tracking Section */}
-
-    <section className="info-section tracking">
-      <div className="info-section-container">
-        <div className="box phone-screen-left">
-          <img src={trackingScreen} alt="Real Time Tracking phone screen" />
-        </div>
-        <div className="box info-section-text">
-          <h2>Real time tracking</h2>
-          <p>
-            Janitime tracks employee location every 5 minutes, ensuring they are
-            on site. Think of it as the most efficient manager you have ever
-            had.
-          </p>
-        </div>
-      </div>
-    </section>
-
     {/* Cloud Section */}
 
     <section className="info-section cloud-section">
       <img src={cloud} alt="" />
-      <h2>All of this, available on your computer</h2>
+
       <p>
         Our web application allows you to manage employees, messages, billing
         and building status. Daily reports keep you informed of the most
         important issues. Everything, in a centralized spot.
       </p>
-      <button className="learn-more-button">Learn More</button>
+      <Link to="/features">
+        <button className="learn-more-button">Learn More</button>
+      </Link>
     </section>
 
     {/* Ready To Join? Section */}
 
     <section className="info-section ready-to-join">
       <h2>Ready to join?</h2>
-      <p>JaniTime's base plan is just $9.95 per month!</p>
+      <p>
+        JaniTime's base plan is just{" "}
+        <span style={{ textDecoration: "underline" }}>$9.95 per month!</span>
+      </p>
       <Link to="/sign-up/">
         <button className="signup-button ">Sign Up</button>
       </Link>
