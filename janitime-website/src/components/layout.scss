@@ -141,7 +141,7 @@ body {
       width,
       $min-screen-size,
       $max-screen-size,
-      400px,
+      600px,
       1300px
     );
     margin: 0 auto;
@@ -165,22 +165,43 @@ body {
         );
 
         @include nav-links;
+        @media screen and (max-width: 900px) {
+          font-size: 0.9rem;
+        }
       }
-      .active-link {
-        font-weight: bold;
+
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    .mobile-nav-menu {
+      display: none;
+      @media screen and (max-width: 700px) {
+        display: inline-block;
       }
     }
     .nav-button {
       @include button;
       // padding-right: 28px;
       // padding-left: 28px;
-      @include interpolate(
-        (padding-left, padding-right),
-        $min-screen-size,
-        $max-screen-size,
-        14px,
-        28px
-      );
+      // @include interpolate(
+      //   (padding-left, padding-right),
+      //   $min-screen-size,
+      //   $max-screen-size,
+      //   14px,
+      //   28px
+      // );
+      width: 116px;
+      height: 48px;
+      font-size: 1rem;
+      @media screen and (max-width: 900px) {
+        width: 90px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      width: 90%;
     }
   }
 }
@@ -193,28 +214,30 @@ body {
     display: inline-block;
     height: fit-content;
     margin-right: 1rem;
+    @media screen and (max-width: 900px) {
+      margin-right: 0.6rem;
+    }
     img {
       width: 48px;
       margin: 0;
       padding: 0;
+      @media screen and (max-width: 900px) {
+        width: 36px;
+      }
     }
   }
   .logo-text {
     line-height: 50px;
     letter-spacing: 0.07em;
-    font-size: 30px;
-    @include interpolate(
-      font-size,
-      $min-screen-size,
-      $max-screen-size,
-      18px,
-      30px
-    );
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: normal;
     display: inline-block;
     margin: 0;
     padding: 0;
+    @media screen and (max-width: 900px) {
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -258,12 +281,6 @@ footer {
         12px,
         22px
       );
-      &:hover {
-        font-weight: bold;
-      }
-    }
-    .active-link {
-      font-weight: bold;
     }
   }
   .footer-container {
@@ -329,7 +346,7 @@ footer {
       width,
       $min-screen-size,
       $max-screen-size,
-      400px,
+      600px,
       1300px
     );
     margin: 0 auto;
@@ -346,7 +363,7 @@ footer {
         width,
         $min-screen-size,
         $max-screen-size,
-        175px,
+        300px,
         700px
       );
     }
@@ -360,26 +377,50 @@ footer {
     .right {
       text-align: right;
     }
-    // @media screen and (max-width: 1000px) {
-    //   width: 90vw;
-    // }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
   }
   .split {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    @media screen and (max-width: 700px) {
+      flex-flow: column-reverse nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
   .left {
     width: 45%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    @media screen and (max-width: 700px) {
+      width: 75%;
+      h1 {
+        font-size: 30px;
+        line-height: 150%;
+      }
+      p {
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
   }
   .right {
     width: 52%;
     display: flex;
     text-align: right;
     justify-content: flex-end;
+    @media screen and (max-width: 700px) {
+      width: 75%;
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -387,42 +428,44 @@ footer {
   background: $gray;
   padding: 64px 0;
   width: 100%;
-  // margin-top: 80px;
-  @include interpolate(
-    margin-top,
-    $min-screen-size,
-    $max-screen-size,
-    30px,
-    80px
-  );
   text-align: center;
 
   .learn-more {
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
-    // width: 45%;
+    justify-content: space-between;
+    align-items: center;
     @include interpolate(
       width,
       $min-screen-size,
       $max-screen-size,
       500px,
-      750px
+      900px
     );
-    justify-content: space-between;
-    align-items: center;
+    @media screen and (max-width: 700px) {
+      width: 95%;
+    }
     .benefit-container {
       width: 33.3%;
       text-align: center;
       p {
         @include paragraph-text;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+        @include interpolate(
+          font-size,
+          $min-screen-size,
+          $max-screen-size,
+          16px,
+          24px
+        );
+
         @include interpolate(
           margin-bottom,
           $min-screen-size,
           $max-screen-size,
           12px,
-          25px
+          16px
         );
       }
     }
@@ -434,6 +477,12 @@ footer {
         top: 50%;
         transform: translateY(-55%);
         width: 35px;
+        @media screen and (max-width: 700px) {
+          width: 16%;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        background-size: 40%;
       }
     }
   }
@@ -461,16 +510,28 @@ footer {
       width,
       $min-screen-size,
       $max-screen-size,
-      400px,
-      1000px
+      500px,
+      1100px
     );
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
+    @media screen and (max-width: 700px) {
+      flex-flow: column nowrap;
+      align-items: center;
+      margin-top: 60px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 75%;
+    }
+
     .info-section-text {
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
+      @media screen and (max-width: 700px) {
+        width: 100%;
+      }
       h2 {
         @include header2;
         width: 100%;
@@ -485,15 +546,28 @@ footer {
       }
       p {
         @include paragraph-text;
-        width: 95%;
+        width: 100%;
+        @media screen and (max-width: 700px) {
+          width: 100%;
+        }
       }
     }
+  }
+}
+
+.reverse {
+  @media screen and (max-width: 700px) {
+    flex-flow: column-reverse !important;
   }
 }
 
 .clock-in {
   background: url("../images/blob.svg") no-repeat right bottom -120px;
   background-size: 30%;
+  @media screen and (max-width: 500px) {
+    background: url("../images/blob.svg") no-repeat right bottom -100px;
+    background-size: 60%;
+  }
 }
 
 .battery-saver {
@@ -505,12 +579,24 @@ footer {
 .auto-gps {
   background: url("../images/blob4.svg") no-repeat right top -150px;
   background-size: 35%;
+  @media screen and (max-width: 500px) {
+    background: url("../images/blob4.svg") no-repeat right top -150px;
+    background-size: 50%;
+  }
 }
 
 .tracking {
   background: url("../images/blob2.svg") no-repeat left bottom -200px;
   background-color: $gray;
   background-size: 30%;
+  @media screen and (max-width: 700px) {
+    background: url("../images/blob2.svg") no-repeat left bottom -220px;
+    background-size: 50%;
+  }
+  @media screen and (max-width: 500px) {
+    background: url("../images/blob2.svg") no-repeat left bottom -100px;
+    background-size: 50%;
+  }
 }
 
 .phone-screen-right {
@@ -523,6 +609,10 @@ footer {
     20px,
     100px
   );
+  @media screen and (max-width: 700px) {
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
 }
 .phone-screen-left {
   text-align: left;
@@ -534,6 +624,10 @@ footer {
     20px,
     100px
   );
+  @media screen and (max-width: 700px) {
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
 }
 
 .box {
@@ -574,8 +668,16 @@ footer {
   }
   p {
     text-align: center;
-    width: 55%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 40px auto 0;
+  }
+  @media screen and (max-width: 700px) {
+    img {
+      width: 90%;
+    }
+    p {
+      width: 90%;
+    }
   }
 }
 
@@ -607,16 +709,6 @@ footer {
 }
 .signup-button {
   @include button;
-  width: fit-content;
-  // padding-left: 5.8rem;
-  // padding-right: 5.8rem;
-  @include interpolate(
-    (padding-left, padding-right),
-    $min-screen-size,
-    $max-screen-size,
-    20px,
-    80px
-  );
   margin: 0 0 0 0;
   @include interpolate(
     margin-top,
@@ -625,9 +717,10 @@ footer {
     16px,
     30px
   );
+  width: 229px;
+  height: 48px;
 
   transition: transform 300ms ease-out, box-shadow 300ms;
-
   a {
     text-decoration: none;
     color: $white;
@@ -640,16 +733,9 @@ footer {
 
 .learn-more-button {
   @include secondary-button;
-  // padding-left: 5.8rem;
-  // padding-right: 5.8rem;
   margin: 30px 0 0 0;
-  @include interpolate(
-    (padding-left, padding-right),
-    $min-screen-size,
-    $max-screen-size,
-    20px,
-    80px
-  );
+  width: 229px;
+  height: 48px;
 }
 
 #signup-submit-button {
@@ -690,6 +776,9 @@ footer {
       1100px
     );
     margin: 0 auto;
+    @media screen and (max-width: 700px) {
+      width: 90%;
+    }
 
     .feature {
       // margin-bottom: 67px;
@@ -711,7 +800,7 @@ footer {
           width,
           $min-screen-size,
           $max-screen-size,
-          18px,
+          20px,
           40px
         );
       }
@@ -736,9 +825,17 @@ footer {
           margin-top,
           $min-screen-size,
           $max-screen-size,
-          14px,
-          26px
+          8px,
+          16px
         );
+        @media screen and (max-width: 700px) {
+          width: 75%;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        height: 100px;
+        justify-content: center;
       }
     }
   }
@@ -886,6 +983,11 @@ footer {
       400px,
       1100px
     );
+    @media screen and (max-width: 700px) {
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+    }
   }
   .testimonial-image {
     // width: 40%;
@@ -898,6 +1000,9 @@ footer {
     );
     img {
       width: 100%;
+    }
+    @media screen and (max-width: 700px) {
+      width: 60%;
     }
   }
   .testimonial-text {
@@ -930,15 +1035,19 @@ footer {
         53px
       );
       // line-height: 53px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       color: $black;
     }
+
     p {
       font-style: normal;
       font-weight: normal;
       @include paragraph-text;
       letter-spacing: 0.02em;
       margin-top: 20px;
+    }
+    @media screen and (max-width: 700px) {
+      padding: 50px 0;
     }
   }
 }
@@ -956,7 +1065,7 @@ footer {
     width: 70%;
     margin: 0 auto;
     background: $white;
-    padding: 120px 80px;
+    padding: 100px 80px;
     h3 {
       font-style: normal;
       font-weight: bold;
@@ -966,6 +1075,10 @@ footer {
       text-align: center;
       color: $black;
       margin-bottom: 4rem;
+    }
+    @media screen and (max-width: 700px) {
+      padding: 0 0 70px 0;
+      width: 80%;
     }
   }
 }
@@ -987,6 +1100,11 @@ footer {
   );
   background: url("../images/blob7.svg") top 200px left no-repeat,
     url("../images/blob8.svg") top 600px right no-repeat;
+  @media screen and (max-width: 700px) {
+    background: url("../images/blob7.svg") top 50px left -200px no-repeat,
+      url("../images/blob8.svg") top 600px right -200px no-repeat;
+    background-size: 60%;
+  }
   h3 {
     font-style: normal;
     font-weight: normal;
@@ -1047,6 +1165,9 @@ footer {
   // width: 40%;
   @include interpolate(width, $min-screen-size, $max-screen-size, 400px, 600px);
   margin: 0 auto;
+  @media screen and (max-width: 700px) {
+    width: 80%;
+  }
   h4 {
     font-style: normal;
     font-weight: bold;
@@ -1096,5 +1217,141 @@ footer {
   }
   textarea {
     height: 6rem;
+  }
+}
+
+.closed {
+  @media screen and (min-width: 700px) {
+    display: none !important;
+  }
+}
+
+.mobile-nav-menu-links {
+  a {
+    color: $black;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    box-sizing: border-box;
+    transition: text-shadow 0.2s;
+    text-decoration: none;
+    &:hover {
+      text-shadow: 0 0 0 #333, 0 0 0.9px #333;
+    }
+  }
+}
+
+.active-link {
+  font-weight: bold !important;
+}
+
+.price-per-month {
+  font-size: 55px;
+  margin-top: 6rem;
+  color: #1b1a1a;
+  font-weight: regular;
+  .dollar-amount {
+    font-weight: bold;
+  }
+  .dollar {
+    font-size: 40px;
+    margin-right: 3px;
+  }
+  .monthly {
+    font-size: 18px;
+    color: #4d4d4d;
+    margin-left: 3px;
+  }
+}
+
+.what-sets-us-apart {
+  background: $white;
+  padding: 100px 0 50px 0;
+
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    @media screen and (max-width: 700px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .point {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 40px 0;
+      @media screen and (max-width: 700px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .number {
+        font-size: 350px;
+        letter-spacing: 0.02em;
+        color: $gray;
+        vertical-align: top;
+
+        margin: -40px 0;
+        padding: 0;
+        @media screen and (max-width: 700px) {
+          font-size: 250px;
+          margin: -20px 0;
+        }
+      }
+      .description-container {
+        width: 50%;
+        @media screen and (max-width: 700px) {
+          width: 80%;
+        }
+
+        .title {
+          font-weight: bold;
+          font-size: 32px;
+          letter-spacing: 0.01em;
+          color: $black;
+          line-height: 148%;
+          @include interpolate(
+            font-size,
+            $min-screen-size,
+            $max-screen-size,
+            21px,
+            30px
+          );
+          @media screen and (max-width: 700px) {
+            font-size: 30px;
+          }
+        }
+        .description {
+          font-size: 21px;
+          letter-spacing: 0.01em;
+          color: $black;
+          font-weight: normal;
+          @include hero-paragraph;
+          @media screen and (max-width: 700px) {
+            font-size: 18px;
+            line-height: 187%;
+          }
+        }
+      }
+    }
+    .spaced {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      @media screen and (max-width: 700px) {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  h2 {
+    @include header2;
+    text-align: center;
+    margin-bottom: 30px;
   }
 }

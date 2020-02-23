@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Janitime`,
+    title: `JaniTime`,
     description: `Your Janitorial Management System`,
     author: `@ManSleen`,
   },
