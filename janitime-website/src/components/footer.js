@@ -19,7 +19,6 @@ const Footer = ({ siteTitle }) => {
             <Link to="/">{siteTitle}</Link>
           </div>
           <div className="footer-links">
-            <h3>Janitime</h3>
             <Link activeClassName="active-link" to="/features">
               Features
             </Link>

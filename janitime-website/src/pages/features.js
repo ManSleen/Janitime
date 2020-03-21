@@ -52,7 +52,7 @@ const Features = () => (
     {/* Features Section */}
 
     <section className="info-section features-container">
-      <h2>Features</h2>
+      <h2 className="features-title">Features</h2>
       <div className="features-thirds-container">
         <div className="features-third">
           <img src={features1} alt="" />
