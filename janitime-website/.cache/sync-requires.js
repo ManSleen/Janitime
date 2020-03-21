@@ -5,6 +5,7 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
+  "component---cache-dev-404-page-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\janitime\\janitime-website\\.cache\\dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\janitime\\janitime-website\\src\\pages\\404.js"))),
   "component---src-pages-features-list-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\janitime\\janitime-website\\src\\pages\\features-list.js"))),
   "component---src-pages-features-js": hot(preferDefault(require("C:\\Users\\Mike\\Desktop\\Websites\\LambdaSchool\\janitime\\janitime-website\\src\\pages\\features.js"))),
